@@ -4,7 +4,12 @@ import '@nomiclabs/hardhat-waffle'
 import '@nomiclabs/hardhat-etherscan'
 
 export default {
+  defaultNetwork: "local",
   networks: {
+    local: {
+      url: "http://127.0.0.1:8545",
+      accounts: [process.env.DEPLOYER_PRIVATE_KEY, process.env.USER_1_PRIVATE_KEY],
+    },
     hardhat: {
       allowUnlimitedContractSize: false,
     },
