@@ -7,6 +7,7 @@ export default {
   defaultNetwork: "local",
   networks: {
     local: {
+        chainId: 3522868364964899,
       url: "http://127.0.0.1:8545",
       accounts: [process.env.DEPLOYER_PRIVATE_KEY, process.env.USER_1_PRIVATE_KEY],
     },
